@@ -19,6 +19,9 @@ const App = () => {
 
 const Main = styled.main`
   padding: 64px 32px;
+  display: flex;
+  border: 1px solid;
+  align-items: flex-start;
 `;
 
 export default App;

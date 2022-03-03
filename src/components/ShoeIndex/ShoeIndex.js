@@ -16,12 +16,12 @@ const ShoeIndex = ({ sortId, setSortId }) => {
         <Header>
           <Title>Running</Title>
           <Select
-            label="Sort"
+            label='Sort'
             value={sortId}
             onChange={(ev) => setSortId(ev.target.value)}
           >
-            <option value="newest">Newest Releases</option>
-            <option value="price">Price</option>
+            <option value='newest'>Newest Releases</option>
+            <option value='price'>Price</option>
           </Select>
         </Header>
         <Spacer size={34} />
@@ -29,11 +29,9 @@ const ShoeIndex = ({ sortId, setSortId }) => {
       </MainColumn>
       <LeftColumn>
         <Breadcrumbs>
-          <Breadcrumbs.Crumb href="/">Home</Breadcrumbs.Crumb>
-          <Breadcrumbs.Crumb href="/sale">Sale</Breadcrumbs.Crumb>
-          <Breadcrumbs.Crumb href="/sale/shoes">
-            Shoes
-          </Breadcrumbs.Crumb>
+          <Breadcrumbs.Crumb href='/'>Home</Breadcrumbs.Crumb>
+          <Breadcrumbs.Crumb href='/sale'>Sale</Breadcrumbs.Crumb>
+          <Breadcrumbs.Crumb href='/sale/shoes'>Shoes</Breadcrumbs.Crumb>
         </Breadcrumbs>
         <Spacer size={42} />
         <ShoeSidebar />
@@ -42,13 +40,28 @@ const ShoeIndex = ({ sortId, setSortId }) => {
   );
 };
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 1rem;
+  align-items: flex-start;
+`;
 
-const LeftColumn = styled.div``;
+const LeftColumn = styled.div`
+  position: sticky;
+`;
 
-const MainColumn = styled.div``;
+const MainColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+`;
 
-const Header = styled.header``;
+const Header = styled.header`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
 
 const Title = styled.h2`
   font-size: 1.5rem;
